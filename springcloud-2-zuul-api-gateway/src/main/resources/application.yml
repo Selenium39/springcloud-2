@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: api-gateway
+server:
+  port: 8084
+
+eureka:
+  client:
+    service-url.defaultZone: http://localhost:1111/eureka/
+
+#传统路由请求转发:不依赖服务发现机制
+#zuul:
+ # routes:
+   # hello-api:
+     #  path: /hello-api/**
+       #url: http://localhost:8080
+
+#面向服务的路由
+zuul:
+  routes:
+     hello-api:
+       path: /hello-api/**
+       serviceId: hello-service

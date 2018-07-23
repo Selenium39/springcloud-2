@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/spring-2-hystrix-dashboard/spring-2-hystrix-dashboard.iml" filepath="$PROJECT_DIR$/spring-2-hystrix-dashboard/spring-2-hystrix-dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-2-eureka-client/springcloud-2-eureka-client.iml" filepath="$PROJECT_DIR$/springcloud-2-eureka-client/springcloud-2-eureka-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-2-eureka-client1/springcloud-2-eureka-client1.iml" filepath="$PROJECT_DIR$/springcloud-2-eureka-client1/springcloud-2-eureka-client1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-2-eureka-server/springcloud-2-eureka-server.iml" filepath="$PROJECT_DIR$/springcloud-2-eureka-server/springcloud-2-eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-2-feign-consumer/springcloud-2-feign-consumer.iml" filepath="$PROJECT_DIR$/springcloud-2-feign-consumer/springcloud-2-feign-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-2-hello-service-api/springcloud-2-hello-service-api.iml" filepath="$PROJECT_DIR$/springcloud-2-hello-service-api/springcloud-2-hello-service-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-2-ribbon-consumer/springcloud-2-ribbon-consumer.iml" filepath="$PROJECT_DIR$/springcloud-2-ribbon-consumer/springcloud-2-ribbon-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-2-zuul-api-gateway/springcloud-2-zuul-api-gateway.iml" filepath="$PROJECT_DIR$/springcloud-2-zuul-api-gateway/springcloud-2-zuul-api-gateway.iml" />
+    </modules>
+  </component>
+</project>

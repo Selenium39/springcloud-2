@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-2-hystrix-dashboard" />
+        <module name="springcloud-2-eureka-client" />
+        <module name="springcloud-2-eureka-client1" />
+        <module name="springcloud-2-eureka-server" />
+        <module name="springcloud-2-feign-consumer" />
+        <module name="springcloud-2-hello-service-api" />
+        <module name="springcloud-2-ribbon-consumer" />
+        <module name="springcloud-2-zuul-api-gateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring-2-hystrix-dashboard" target="1.8" />
+      <module name="springcloud-2" target="1.8" />
+      <module name="springcloud-2-eureka-client" target="1.8" />
+      <module name="springcloud-2-eureka-client1" target="1.8" />
+      <module name="springcloud-2-eureka-server" target="1.8" />
+      <module name="springcloud-2-feign-consumer" target="1.8" />
+      <module name="springcloud-2-hello-service-api" target="1.8" />
+      <module name="springcloud-2-hystrix" target="1.8" />
+      <module name="springcloud-2-hystrix-eureka" target="1.8" />
+      <module name="springcloud-2-ribbon-consumer" target="1.8" />
+      <module name="springcloud-2-zuul-api-gateway" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
