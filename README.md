@@ -1,1 +1,53 @@
-# springcloud-2
+                                          # springcloud-2
+```
+              服务容错保护:Spring Cloud Hystrix
+过程:
+    1.创建１个注册中心,２个服务提供者,创建两个同名的服务Hello-Service(端口不同),创建一个ribbon-consumer,
+    　此时访问http://localhost:8082/hello,会轮询访问.若关掉２个服务，则报错
+    2.导包,在启动类中添加@EnableCircuitBreaker注解,在service中添加@hystrixCommond注解并指定fallback函数
+
+问题:
+    1.搭建服务注册中心是报错:java.lang.NoSuchMethodError: org.springframework.boot.builder.SpringApplicationBuilder.<init>([Ljava/lang/Object;)V
+　  答:jar包冲突.
+    2.导入spring-cloud-starter-hystrix后没有@HystrixCommond注解
+    答:此包已经过时了，使用spring-cloud-starter-netflix-hystrix
+
+               声明式服务调用: Spring Cloud Feign(ribbon+hystrix)
+过程:
+    1.导包
+    2.在主方法中加入@EbableFeignClient,在@Service中添加@FeignClient注解,值为服务名
+
+问题:
+    1.启动时报错 BeanCreationNotAllowedException: Error creating bean with name 'eurekaAutoServiceRegistration'
+　　答:https://www.cnblogs.com/ydymz/p/8953388.html
+    2.启动没报错,但是服务自己停止了
+    答:忘记导入web的jar包了
+
+3.继承特性
+    原先是在client,consumer中各自定义了相同的Service,这样有大量的重复代码,我们可以将它抽象出来为一个
+    服务接口springcloud-2-hello-service.api　通过maven依赖继承的方式,在client,consumer中实现api中的接口
+    不过产生的副作用是项目的构建对服务接口产生依赖
+4.Ribbon的配置
+    1.全局配置:ribbon.<key>=<value>
+    2.指定服务配置:<client>.ribbon.<key>=<value>(此例中client=HELLO-SERVICE,使用@FeignClient在创建Feign Client的同时也创建了Ribbon Client)
+    3.Feign默认开启了Ribbon的重试机制
+5.Hystrix配置
+    1.全局配置
+    ...
+
+                        API网关服务:Spring Clod Zuul
+1.构建网关
+    1.导包
+    2.在主类上@EnableZuulProxy,在配置文件中配置信息
+2.请求路由
+    1.传统请求路由:path--->url
+    2.面向服务的路由:path--->服务,通过Eureka Client自动管理和维护url
+3.配置请求过滤
+    1.自定义过滤类实现ZuulFilter接口
+    2.在主类中添加自定义类的bean
+    3.通过url?param=value来访问
+4.异常处理
+5.动态加载
+   1.动态路由
+   2.动态过滤器
+```
